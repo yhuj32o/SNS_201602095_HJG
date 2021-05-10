@@ -231,7 +231,7 @@ TEE_Result TA_InvokeCommandEntryPoint(void __maybe_unused *sess_ctx,
 			uint32_t param_types, TEE_Param params[4])
 {
 	(void)&sess_ctx; /* Unused parameter */
-	TEE_GenerateRandom(&key, sizeof(key+1));
+	TEE_GenerateRandom(&key, sizeof(key));
 	switch (cmd_id) {
 	case TA_TEEENCRYPT_CMD_ENC_VALUE:
 		return enc_value(param_types, params);

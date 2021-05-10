@@ -64,7 +64,7 @@ int main(void)
 	op.params[0].tmpref.size = len;
 
 	FILE* fp = fopen("text.txt", "r");
-	fread(op.params[0].tmpref.buffer, 0, 64, fp);
+	fread(plaintext, 1, len, fp);
 	printf("========================Encryption========================\n");
 	printf("Please Input Plaintext : ");
 //	scanf("%[^\n]s",plaintext);
